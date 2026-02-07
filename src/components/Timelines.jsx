@@ -116,11 +116,16 @@ export default function Timelines() {
   return (
     <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-6xl px-6">
+        <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
+          Timelines
+        </h2>
+        <br />
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Changed label to allow rendering specific column types if needed, currently reusing logic */}
           <TimelineColumn label="Experience Timeline" items={experience} />
           <TimelineColumn label="Education Timeline" items={education} />
         </div>
+        
       </div>
     </section>
   );

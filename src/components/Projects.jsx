@@ -1,30 +1,54 @@
 import { motion } from "framer-motion";
+import { DollarSign, PenTool, Activity, HeartPulse, Rocket, Stethoscope } from "lucide-react";
 
 const projects = [
   {
+    title: "Expense Tracker",
+    impact: "Smart financial tracking app with visualization and budget management.",
+    stack: ["React", "Node.js", "MongoDB", "Chart.js"],
+    link: "https://github.com/mdabucse/Dev_Tracking",
+    icon: DollarSign,
+    color: "text-emerald-400"
+  },
+  {
     title: "Sketch Mentor",
-    impact: "Handwritten math to LLM tutoring with retrieval-augmented hints.",
-    stack: ["Gemini", "Qwen", "LangChain", "FastAPI"],
+    impact: "AI-powered tutoring system converting sketches to educational content.",
+    stack: ["Python", "OpenCV", "Gemini API", "Streamlit"],
+    link: "https://github.com/mdabucse/Edu-Hacks-Sketch-Mentor",
+    icon: PenTool,
+    color: "text-purple-400"
   },
   {
     title: "Pulse AI",
-    impact: "NICU monitoring with real-time computer vision signals.",
-    stack: ["Flask", "OpenCV", "MediaPipe", "MongoDB"],
+    impact: "Non-invasive health monitoring and vitals extraction using computer vision.",
+    stack: ["Python", "Deep Learning", "MediaPipe", "Flask"],
+    link: "https://github.com/mdabucse/PULSE-AI",
+    icon: Activity,
+    color: "text-cyan-400"
   },
   {
     title: "Visionary Glucometer",
-    impact: "CNN + food intelligence for predictive health insights.",
-    stack: ["TensorFlow", "OpenCV", "React Native", "MongoDB"],
+    impact: "Non-invasive glucose level estimation using advanced image processing.",
+    stack: ["TensorFlow", "OpenCV", "Hardware Integration", "IoT"],
+    link: "https://github.com/mdabucse/Smart-Gluco",
+    icon: HeartPulse,
+    color: "text-red-400"
   },
   {
-    title: "InnovHunt",
-    impact: "Web3 meets AI for smart founder matching and idea validation.",
-    stack: ["Gemini", "Pinecone", "Flask", "Web3"],
+    title: "Innovhunt",
+    impact: "Platform for connecting innovators, showcasing projects, and finding hackathons.",
+    stack: ["React", "Firebase", "Tailwind CSS", "Framer Motion"],
+    link: "https://github.com/mdabucse/INNOVHUNT",
+    icon: Rocket,
+    color: "text-orange-400"
   },
   {
-    title: "Prescription Bot",
-    impact: "OCR + NER pipeline with Gemini-powered extraction.",
-    stack: ["OCR", "NER", "Streamlit", "Gemini"],
+    title: "Med IQ",
+    impact: "Intelligent medical assistant for symptom analysis and preliminary diagnosis.",
+    stack: ["LLMs", "RAG", "VectorDB", "FastAPI"],
+    link: "https://github.com/mdabucse/MED-IQ",
+    icon: Stethoscope,
+    color: "text-blue-400"
   },
 ];
 
@@ -56,36 +80,66 @@ export default function Projects() {
         </motion.div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <motion.article
-              key={project.title}
-              className="glass rounded-3xl p-6"
-              custom={index}
-              variants={cardMotion}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <div className="relative h-40 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#c6ff00]/20 via-transparent to-white/5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(198,255,0,0.25),_transparent_70%)]" />
-                <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.3em] text-white/60">
-                  Mock UI
+          {projects.map((project, index) => {
+            const Icon = project.icon;
+            return (
+              <motion.a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={project.title}
+                className="glass rounded-3xl p-6 block hover:bg-white/5 transition-colors group"
+                custom={index}
+                variants={cardMotion}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <div className="relative h-48 overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]">
+                  {/* Project Image */}
+                  <img
+                    src={
+                      project.title === "Expense Tracker" ? "/projects/expense-tracker.png" :
+                        project.title === "Sketch Mentor" ? "/projects/sketch-mentor.png" :
+                          project.title === "Pulse AI" ? "/projects/pulse-ai.png" :
+                            project.title === "Visionary Glucometer" ? "/projects/smart-gluco.png" :
+                              project.title === "Innovhunt" ? "/projects/innovhunt.png" :
+                                project.title === "Med IQ" ? "/projects/med-iq.png" : ""
+                    }
+                    alt={project.title}
+                    className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90" />
+
+                  <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-2 rounded-full border border-white/10 text-white/80 group-hover:text-[#c6ff00] transition-colors">
+                    <Icon size={20} className={project.color} />
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-2xl font-bold flex items-center gap-2 mb-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs text-white/50 uppercase tracking-widest font-medium">Public Repository</p>
+                  </div>
                 </div>
-              </div>
-              <h3 className="mt-5 text-xl font-semibold">{project.title}</h3>
-              <p className="mt-3 text-sm text-white/60">{project.impact}</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.stack.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/15 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/70"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </motion.article>
-          ))}
+
+                <p className="mt-4 text-sm text-white/70 leading-relaxed">{project.impact}</p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.1em] text-white/60 hover:border-[#c6ff00]/30 hover:text-[#c6ff00] transition-colors"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.a>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -14,19 +14,19 @@ export default function SkillsTicker() {
   const track = [...skills, ...skills, ...skills];
 
   return (
-    <section className="mt-12 mb-8">
-      <div className="ticker is-ticker bg-[#c6ff00] py-4 text-black overflow-hidden relative rotate-1 scale-105 border-y-4 border-black box-border shadow-xl z-20">
+    <section className="mt-8 mb-4">
+      <div className="ticker is-ticker bg-[#c6ff00] py-2 text-black overflow-hidden relative rotate-1 border-y-2 border-black box-border shadow-lg z-20">
         <div
-          className="ticker-track flex items-center gap-12 whitespace-nowrap animate-marquee"
+          className="ticker-track flex items-center gap-8 whitespace-nowrap animate-marquee"
           style={{ animationDuration: "80s" }}
         >
           {track.map((skill, index) => (
             <span
               key={`${skill}-${index}`}
-              className="flex items-center gap-4 text-xl font-bold uppercase tracking-[0.2em]"
+              className="flex items-center gap-4 text-sm font-bold uppercase tracking-[0.2em]"
             >
               {skill}
-              <span className="text-black/40">★</span>
+              <span className="text-black/40"> </span>
             </span>
           ))}
         </div>
