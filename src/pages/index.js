@@ -20,6 +20,8 @@ export default function HomePage() {
           name="description"
           content="AI engineer building production-grade LLM, RAG, and computer vision systems."
         />
+        <link rel="icon" type="image/png" href="/abu.png" />
+        <link rel="apple-touch-icon" href="/abu.png" />
       </Head>
       <div className="relative min-h-screen bg-[#050505] text-white">
         <div className="pointer-events-none absolute -top-32 right-0 h-72 w-72 rounded-full bg-[#c6ff00]/10 blur-3xl" />
