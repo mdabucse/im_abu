@@ -4,21 +4,39 @@ const experience = [
   {
     title: "AI Engineer — ZUDU.AI",
     detail:
-      "Tanglish LLM fine-tuning with Unsloth, Mistral, Gemma, Qwen on GCP.",
+      "Fine-tuned a Tanglish-focused Large Language Model using Unsloth, optimizing multilingual understanding and inference efficiency. Benchmarked and evaluated Mistral, Gemma, and Qwen models on GCP VMs to identify the best-performing architecture for real-world deployment.",
+    highlights: [
+      "Tanglish dataset curation & preprocessing",
+      "LLM fine-tuning and evaluation pipelines",
+      "Cloud-based training on Google Cloud Platform",
+      "Comparative model performance analysis",
+    ],
     time: "Sep 2025 – Oct 2025",
     location: "Onsite · Chennai",
   },
   {
-    title: "ML Engineer — Cellstrat",
+    title: "ML Engineer — CellStrat",
     detail:
-      "RAG pipelines with VectorDB, OpenAI, and AWS. Prompt engineering and REST API integration.",
+      "Built an AI-powered chatbot using RAG architecture with VectorDB, OpenAI, and AWS, significantly improving contextual response accuracy. Designed scalable REST APIs and applied advanced prompt engineering to enhance LLM output quality in production environments.",
+    highlights: [
+      "Retrieval-Augmented Generation (RAG) pipelines",
+      "Vector database design & optimization",
+      "Prompt engineering for LLM reliability",
+      "RESTful API integration with cloud services",
+    ],
     time: "May 2024 – Aug 2024",
     location: "Remote",
   },
   {
-    title: "150+ Hackathons — 6x Winner",
+    title: "150+ Hackathons — 6× Winner",
     detail:
-      "Participated in 70+ hackathons; won INR 6,08,000 across two international and two national competitions.",
+      "Actively participated in 150+ hackathons, securing 6 wins and earning ₹6,08,000+ through innovative, high-impact solutions. Achieved top positions in two international and two national-level competitions, collaborating across diverse, fast-paced teams.",
+    highlights: [
+      "Rapid prototyping under time constraints",
+      "Cross-functional teamwork & leadership",
+      "Real-world problem-solving using AI & ML",
+      "Consistent top-tier performance at scale",
+    ],
     time: "Jan 2023 – Present",
     location: "Global",
   },
@@ -36,6 +54,18 @@ const education = [
     detail: "B.Tech, AI and Data Science",
     time: "Nov 2022 – Nov 2026",
     location: "Coimbatore, India",
+  },
+  {
+    title: "Syed Ammal Higher Secondary School",
+    detail: "HSC",
+    time: "2020 – 2022",
+    location: "Ramanathapuram",
+  },
+  {
+    title: "Mohamedia Higher Secondary School",
+    detail: "SSLC",
+    time: "2020",
+    location: "Ramanathapuram",
   },
 ];
 
@@ -59,9 +89,18 @@ function TimelineColumn({ label, items }) {
             <div className="timeline-col">
               <span className="timeline-pill">{item.time}</span>
               <div className="glass timeline-card">
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm text-white/70">{item.detail}</p>
-                <p className="mt-3 text-xs uppercase tracking-[0.2em] text-white/40">
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="mt-2 text-base text-white/70 leading-relaxed">
+                  {item.detail}
+                </p>
+                {item.highlights && (
+                  <ul className="mt-4 list-disc pl-4 text-sm text-white/60 space-y-1.5">
+                    {item.highlights.map((highlight, idx) => (
+                      <li key={idx}>{highlight}</li>
+                    ))}
+                  </ul>
+                )}
+                <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/40">
                   {item.location}
                 </p>
               </div>
@@ -78,6 +117,7 @@ export default function Timelines() {
     <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-2">
+          {/* Changed label to allow rendering specific column types if needed, currently reusing logic */}
           <TimelineColumn label="Experience Timeline" items={experience} />
           <TimelineColumn label="Education Timeline" items={education} />
         </div>

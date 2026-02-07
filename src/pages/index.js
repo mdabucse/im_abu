@@ -22,11 +22,11 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -top-32 right-0 h-72 w-72 rounded-full bg-[#c6ff00]/10 blur-3xl" />
         <main>
           <Hero />
+          <Timelines />
           <SkillsTicker />
           <Projects />
           <Skills />
           <Services />
-          <Timelines />
           <Testimonials />
           <CTA />
         </main>

@@ -1,78 +1,97 @@
 ﻿import { motion } from "framer-motion";
 
 const stats = [
-  { value: "70+", label: "Hackathons" },
-  { value: "INR 6,08,000", label: "Won" },
-  { value: "6x", label: "Winner" },
-  { value: "IIT Madras", label: "Education" },
+  { value: "150+", label: "Hackathons" },
+  { value: "6X", label: "Wins" },
+  { value: "IITM", label: "Education" },
 ];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pb-16 pt-16 lg:pt-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
-              AI Systems Builder
-            </div>
-            <h1 className="mt-6 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Mohamed <span className="text-[#c6ff00]">Abubakkar</span> S
-            </h1>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                className="rounded-full bg-[#c6ff00] px-6 py-3 text-sm font-semibold text-black shadow-[0_0_20px_rgba(198,255,0,0.35)] transition hover:translate-y-[-2px]"
-                href="#contact"
-              >
-                Let&apos;s Talk
-              </a>
-              <a
-                className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-white/50"
-                href="#projects"
-              >
-                View Projects
-              </a>
-            </div>
-          </motion.div>
+    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#050505]" id="home">
 
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="hero-right"
+      {/* Background Text Layer */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none leading-none pt-12 lg:pt-0">
+        <h1
+          className="text-[15.5vw] lg:text-[13.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
+          style={{ fontFamily: 'var(--font-anton)', lineHeight: 0.85 }}
+        >
+          MOHAMED
+        </h1>
+        <h1
+          className="text-[13vw] lg:text-[11.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
+          style={{ fontFamily: 'var(--font-anton)', lineHeight: 0.85 }}
+        >
+          ABUBAKKAR
+        </h1>
+      </div>
+
+      {/* Foreground Image Layer */}
+      <div className="absolute bottom-0 z-10 flex justify-center items-end h-[90vh] w-full pointer-events-none">
+        <motion.img
+          src="/abu.png"
+          alt="Mohamed Abubakkar"
+          className="h-full w-auto object-contain object-bottom drop-shadow-2xl transition-all duration-700"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
+        {/* Subtle gradient at bottom to blend legs/bottom of image */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div>
+      </div>
+
+      {/* Overlay Content (Interactive) */}
+      <div className="absolute inset-0 z-20 container mx-auto px-6 py-8 flex flex-col justify-between pointer-events-none">
+        {/* Top Row */}
+        <div className="flex justify-between items-start pointer-events-auto mt-4">
+          <div className="text-left">
+            <div className="text-[#c6ff00] text-xs font-bold uppercase tracking-[0.2em] mb-1">
+              Upcoming Associate Engineer @ Presidio
+            </div>
+            <div className="text-white text-sm font-light tracking-wide opacity-80">
+              Ramanathapuram
+            </div>
+          </div>
+
+          <a
+            href="#contact"
+            className="group flex items-center gap-2 text-white hover:text-[#c6ff00] transition-colors duration-300"
           >
-            <div className="hero-stats space-y-6">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-left">
-                  <div className="text-3xl font-semibold text-white">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs uppercase tracking-[0.3em] text-white/40">
-                    {stat.label}
-                  </div>
+            <span className="uppercase text-xs font-bold tracking-widest border border-white/20 px-6 py-2 rounded-full hover:bg-white/5 transition-all text-white hover:border-[#c6ff00]">
+              Let's Talk
+            </span>
+          </a>
+        </div>
+
+        {/* Bottom Row */}
+        <div className="flex justify-between items-end pointer-events-auto mb-4">
+          {/* Bottom Left: Bio/Intro */}
+          <div className="hidden lg:block max-w-xs text-left">
+            <p className="text-white/60 text-xs leading-relaxed font-light">
+              AI Engineer specializing in LLMs, RAG pipelines, and end-to-end ML applications.
+              IIT Madras Data Science student with 150+ hackathons and 6 national & international wins.
+            </p>
+          </div>
+
+          {/* Bottom Right: Stats */}
+          <div className="text-left lg:text-right flex flex-col gap-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] items-start lg:items-end">
+            {stats.slice(0, 3).map((stat) => (
+              <div key={stat.label}>
+                <div className="text-2xl font-bold text-white leading-none">
+                  {stat.value}
                 </div>
-              ))}
-            </div>
-
-            <div className="hero-visual hero-visual-simple">
-              <div className="hero-portrait hero-portrait-simple">
-                <img src="/abu.png" alt="Mohamed Abubakkar" />
+                <div className="text-[10px] uppercase tracking-[0.2em] text-white/80 mt-1 font-semibold">
+                  {stat.label}
+                </div>
               </div>
-            </div>
-          </motion.div>
+            ))}
+            <a href="/resume.pdf" className="text-xs text-[#c6ff00] underline underline-offset-4 mt-2 font-bold drop-shadow-md">
+              Download CV
+            </a>
+          </div>
         </div>
       </div>
+
     </section>
   );
 }
