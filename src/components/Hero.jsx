@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#050505]" id="home">
 
       {/* Background Text Layer */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none leading-none pt-12 lg:pt-0">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none leading-none pt-6 lg:pt-0">
         <h1
           className="text-[15.5vw] lg:text-[13.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
           style={{ fontFamily: 'var(--font-anton)', lineHeight: 0.85 }}
@@ -43,7 +43,7 @@ export default function Hero() {
       {/* Overlay Content (Interactive) */}
       <div className="absolute inset-0 z-20 container mx-auto px-6 py-8 flex flex-col justify-between pointer-events-none">
         {/* Top Row */}
-        <div className="flex justify-between items-start pointer-events-auto mt-4">
+        <div className="flex justify-between items-start pointer-events-auto mt-2">
           <div className="text-left">
             <div className="text-[#c6ff00] text-xs font-bold uppercase tracking-[0.2em] mb-1">
               Upcoming Associate Engineer @ Presidio
@@ -52,15 +52,6 @@ export default function Hero() {
               Ramanathapuram
             </div>
           </div>
-
-          <a
-            href="#contact"
-            className="group flex items-center gap-2 text-white hover:text-[#c6ff00] transition-colors duration-300"
-          >
-            <span className="uppercase text-xs font-bold tracking-widest border border-white/20 px-6 py-2 rounded-full hover:bg-white/5 transition-all text-white hover:border-[#c6ff00]">
-              Let's Talk
-            </span>
-          </a>
         </div>
 
         {/* Bottom Row */}
