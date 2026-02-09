@@ -66,7 +66,7 @@ export default function Contact() {
                                 <p className="text-xs text-white/50 uppercase tracking-wider mb-4">Social Links</p>
                                 <div className="flex gap-4">
                                     <a
-                                        href="https://linkedin.com/in/im_abu"
+                                        href="https://linkedin.com/in/imabu"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="p-3 rounded-lg bg-white/5 hover:bg-[#c6ff00]/10 text-white/70 hover:text-[#c6ff00] transition-colors"
