@@ -57,7 +57,7 @@ const cardMotion = {
   visible: (index) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: index * 0.1 },
+    transition: { duration: 0.35, delay: index * 0.07 },
   }),
 };
 
@@ -69,7 +69,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
             Featured Work
@@ -107,7 +107,7 @@ export default function Projects() {
                                 project.title === "Med IQ" ? "/projects/med-iq.png" : ""
                     }
                     alt={project.title}
-                    className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                   />
 
                   {/* Gradient Overlay */}

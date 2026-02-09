@@ -120,7 +120,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
             Technical Arsenal
@@ -142,7 +142,7 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.35, delay: index * 0.03 }}
                 className="glass rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all group"
               >
                 <div className="flex items-center gap-3 mb-4">

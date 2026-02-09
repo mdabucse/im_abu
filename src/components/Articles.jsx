@@ -52,7 +52,7 @@ export default function Articles() {
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                 >
                     <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
                         Publications & IP
@@ -71,11 +71,11 @@ export default function Articles() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                transition={{ duration: 0.35, delay: index * 0.07 }}
                                 className="glass rounded-3xl p-6 border border-white/10 hover:border-white/20 transition-colors group relative overflow-hidden"
                             >
                                 {/* Background Gradient */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
 
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-4">

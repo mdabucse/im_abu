@@ -32,7 +32,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
             Experience
@@ -52,7 +52,7 @@ export default function Experience() {
                 initial={{ opacity: 0, y: 24, scale: 0.98 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.07 }}
               >
                 <div className={`timeline-col ${isLeft ? "text-right" : "hidden md:flex"}`}>
                   {isLeft && (

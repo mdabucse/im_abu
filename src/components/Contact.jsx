@@ -15,7 +15,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                 >
                     <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
                         Get In Touch
@@ -31,7 +31,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.4 }}
                         className="space-y-6"
                     >
                         <div className="glass rounded-2xl p-8 border border-white/10">
@@ -66,7 +66,7 @@ export default function Contact() {
                                 <p className="text-xs text-white/50 uppercase tracking-wider mb-4">Social Links</p>
                                 <div className="flex gap-4">
                                     <a
-                                        href="https://linkedin.com/in/yourprofile"
+                                        href="https://linkedin.com/in/im_abu"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="p-3 rounded-lg bg-white/5 hover:bg-[#c6ff00]/10 text-white/70 hover:text-[#c6ff00] transition-colors"
@@ -91,7 +91,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.4 }}
                         className="glass rounded-2xl overflow-hidden border border-white/10 h-full"
                     >
                         <iframe
@@ -102,7 +102,7 @@ export default function Contact() {
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            className="grayscale-[0.3] opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                            className="grayscale-[0.3] opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                         ></iframe>
                     </motion.div>
                 </div>

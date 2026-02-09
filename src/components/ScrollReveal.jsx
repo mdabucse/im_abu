@@ -53,7 +53,7 @@ export default function ScrollReveal({
                     y: 0
                 }}
                 transition={{
-                    duration: 1,
+                    duration: 0.7,
                     ease: "easeOut"
                 }}
                 viewport={{ once: true, margin: "-10%" }}

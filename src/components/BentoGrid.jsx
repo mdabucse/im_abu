@@ -22,11 +22,11 @@ export const BentoCard = ({ className, children, href }) => {
 
     const Content = (
         <div
-            className={`group relative border border-white/10 overflow-hidden rounded-xl bg-[#0a0a0a] hover:border-white/20 transition-colors duration-500 ${className}`}
+            className={`group relative border border-white/10 overflow-hidden rounded-xl bg-[#0a0a0a] hover:border-white/20 transition-colors duration-300 ${className}`}
             onMouseMove={handleMouseMove}
         >
             <motion.div
-                className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+                className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-200 group-hover:opacity-100"
                 style={{
                     background: useMotionTemplate`
             radial-gradient(

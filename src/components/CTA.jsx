@@ -15,7 +15,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(198,255,0,0.18),_transparent_60%)] p-10 text-center sm:p-14"
         >
           <h2 className="text-3xl font-semibold sm:text-4xl">

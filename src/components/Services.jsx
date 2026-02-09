@@ -16,7 +16,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
             What I Build

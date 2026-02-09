@@ -11,15 +11,16 @@ export default function Hero() {
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#050505]" id="home">
 
       {/* Background Text Layer */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none leading-none pt-6 lg:pt-0">
+      {/* Background Text Layer */}
+      <div className="absolute inset-0 flex flex-col items-center justify-start lg:justify-center z-0 pointer-events-none select-none leading-none pt-40 lg:pt-0">
         <h1
-          className="text-[15.5vw] lg:text-[13.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
+          className="text-[20vw] lg:text-[13.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
           style={{ fontFamily: 'var(--font-anton)', lineHeight: 0.85 }}
         >
           MOHAMED
         </h1>
         <h1
-          className="text-[13vw] lg:text-[11.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
+          className="text-[16vw] lg:text-[11.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
           style={{ fontFamily: 'var(--font-anton)', lineHeight: 0.85 }}
         >
           ABUBAKKAR
@@ -27,14 +28,14 @@ export default function Hero() {
       </div>
 
       {/* Foreground Image Layer */}
-      <div className="absolute bottom-0 z-10 flex justify-center items-end h-[90vh] w-full pointer-events-none">
+      <div className="absolute bottom-0 z-10 flex justify-center items-end h-[95vh] w-full pointer-events-none">
         <motion.img
           src="/abu.png"
           alt="Mohamed Abubakkar"
-          className="h-full w-auto object-contain object-bottom drop-shadow-2xl transition-all duration-700"
+          className="h-full w-auto object-contain object-bottom drop-shadow-2xl transition-all duration-500"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         />
         {/* Subtle gradient at bottom to blend legs/bottom of image */}
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div>
@@ -44,7 +45,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-20 container mx-auto px-6 py-8 flex flex-col justify-between pointer-events-none">
         {/* Top Row */}
         <div className="flex justify-between items-start pointer-events-auto mt-2">
-          <div className="text-left">
+          <div className="text-left max-w-[calc(100%-80px)]">
             <div className="text-[#c6ff00] text-xs font-bold uppercase tracking-[0.2em] mb-1">
               Upcoming Associate Engineer @ Presidio
             </div>

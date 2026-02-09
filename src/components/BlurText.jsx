@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function BlurText({
     text = "",
-    delay = 200,
+    delay = 140,
     className = "",
     animateBy = "words", // 'words' or 'letters'
     direction = "top", // 'top', 'bottom', 'left', 'right'
@@ -33,7 +33,7 @@ export default function BlurText({
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
             opacity: 1,
-            transition: { staggerChildren: 0.04, delayChildren: delay / 1000 },
+            transition: { staggerChildren: 0.03, delayChildren: delay / 1000 },
         }),
     };
 

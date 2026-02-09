@@ -8,7 +8,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="glass rounded-3xl p-8 text-center"
         >
           <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">

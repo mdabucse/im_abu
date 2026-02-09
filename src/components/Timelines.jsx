@@ -83,7 +83,7 @@ function TimelineColumn({ label, items }) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.4, delay: index * 0.07 }}
           >
             <div className="timeline-dot" />
             <div className="timeline-col">
@@ -125,7 +125,7 @@ export default function Timelines() {
           <TimelineColumn label="Experience Timeline" items={experience} />
           <TimelineColumn label="Education Timeline" items={education} />
         </div>
-        
+
       </div>
     </section>
   );

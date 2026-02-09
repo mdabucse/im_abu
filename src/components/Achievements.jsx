@@ -128,8 +128,8 @@ const ImageSlider = ({ images, interval = 2500 }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.5 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="w-full h-full object-cover absolute inset-0 group-hover/card:opacity-100 group-hover/card:scale-105 transition-transform duration-700"
+                    transition={{ duration: 0.4 }}
+                    className="w-full h-full object-cover absolute inset-0 group-hover/card:opacity-100 group-hover/card:scale-105 transition-transform duration-500"
                 />
             </AnimatePresence>
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent pointer-events-none" />
@@ -139,7 +139,7 @@ const ImageSlider = ({ images, interval = 2500 }) => {
                     {images.map((_, idx) => (
                         <div
                             key={idx}
-                            className={`h-1 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-[#c6ff00]' : 'w-1.5 bg-white/30'
+                            className={`h-1 rounded-full transition-all duration-200 ${idx === currentIndex ? 'w-6 bg-[#c6ff00]' : 'w-1.5 bg-white/30'
                                 }`}
                         />
                     ))}
@@ -166,7 +166,7 @@ export default function Achievements() {
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                 >
                     <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
                         Wall of Fame
@@ -174,7 +174,7 @@ export default function Achievements() {
                     <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
                         Achievements & Awards
                     </h2>
-                    <br/>
+                    <br />
                 </motion.div>
 
                 <BentoGrid>
@@ -187,7 +187,7 @@ export default function Achievements() {
                                     <ImageSlider images={item.images} interval={2000 + (i * 600)} />
 
                                     {/* Background Gradient */}
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover/card:opacity-20 transition-opacity duration-500 pointer-events-none`} />
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover/card:opacity-20 transition-opacity duration-300 pointer-events-none`} />
 
                                     <div className="flex justify-between items-start mb-4 relative z-10 pointer-events-none">
                                         <div className={`p-3 rounded-xl bg-white/5 border border-white/10 ${item.textColor} backdrop-blur-md`}>

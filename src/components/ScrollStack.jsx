@@ -36,7 +36,7 @@ function Card({ children, index, total, scaleFactor = 0.05, offset = 40 }) {
                 className="origin-top"
                 initial={{ scale: 1, y: 50, opacity: 0 }}
                 whileInView={{ scale: 1, y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.35, delay: index * 0.07 }}
                 viewport={{ once: true, margin: "-10%" }}
             >
                 {children}

@@ -158,7 +158,7 @@ a {
   display: inline-flex;
   gap: 2.5rem;
   padding-left: 1rem;
-  animation: ticker 18s linear infinite;
+  animation: ticker 12s linear infinite;
 }
 
 .timeline {

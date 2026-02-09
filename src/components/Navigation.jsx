@@ -17,7 +17,7 @@ const menuVariants = {
     closed: {
         opacity: 0,
         transition: {
-            staggerChildren: 0.03,
+            staggerChildren: 0.02,
             staggerDirection: -1,
             when: "afterChildren",
         },
@@ -25,8 +25,8 @@ const menuVariants = {
     open: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.05,
-            delayChildren: 0.05,
+            staggerChildren: 0.03,
+            delayChildren: 0.03,
             when: "beforeChildren",
         },
     },
@@ -58,7 +58,7 @@ export default function Navigation() {
             <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1 }}
+                transition={{ delay: 0.7 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className="fixed top-6 right-6 z-[100] p-4 rounded-full bg-[#c6ff00] text-black hover:bg-[#c6ff00]/90 transition-colors shadow-lg shadow-[#c6ff00]/20"
                 aria-label="Toggle menu"
@@ -95,7 +95,7 @@ export default function Navigation() {
                                         href={item.href}
                                         variants={itemVariants}
                                         onClick={handleLinkClick}
-                                        className="group relative text-4xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#c6ff00] transition-colors duration-300"
+                                        className="group relative text-4xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#c6ff00] transition-colors duration-200"
                                         custom={index}
                                     >
                                         {/* Hover Effect Line */}
@@ -103,7 +103,7 @@ export default function Navigation() {
                                             className="absolute -bottom-2 left-0 h-1 bg-[#c6ff00]"
                                             initial={{ width: 0 }}
                                             whileHover={{ width: "100%" }}
-                                            transition={{ duration: 0.3 }}
+                                            transition={{ duration: 0.2 }}
                                         />
                                         {item.name}
                                     </motion.a>
