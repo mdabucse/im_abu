@@ -69,7 +69,7 @@ const achievements = [
         milestones: [],
         prize: "Winner",
         icon: Award,
-        images: ["/achievements/innovfest_1.jpg", "/achievements/innovfest_2.jpg"],
+        images: ["/achievements/Innovfest_1.jpg", "/achievements/Innovfest_2.jpg"],
         className: "md:col-span-1",
         gradient: "from-teal-500/20 to-cyan-600/5",
         textColor: "text-teal-400"

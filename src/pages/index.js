@@ -7,7 +7,9 @@ import Achievements from "../components/Achievements";
 import Skills from "../components/Skills";
 import Timelines from "../components/Timelines";
 import Articles from "../components/Articles";
+import Resume from "../components/Resume";
 import Contact from "../components/Contact";
+
 
 export default function HomePage() {
   const bio = "I'm an AI Engineer and Data Science student at IIT Madras, focused on building real-world AI systems using LLMs, RAG pipelines, and computer vision. With 150+ hackathons and multiple national and international wins, I turn ideas into scalable, production-ready solutions.";
@@ -43,6 +45,7 @@ export default function HomePage() {
           <Articles />
           <SkillsTicker />
           <Skills />
+          <Resume />
           <Contact />
         </main>
       </div>

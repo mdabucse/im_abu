@@ -77,7 +77,7 @@ export default function Hero() {
                 </div>
               </div>
             ))}
-            <a href="/resume.pdf" className="text-xs text-[#c6ff00] underline underline-offset-4 mt-2 font-bold drop-shadow-md">
+            <a href="/cv.html?download=true" className="text-xs text-[#c6ff00] underline underline-offset-4 mt-2 font-bold drop-shadow-md">
               Download CV
             </a>
           </div>
